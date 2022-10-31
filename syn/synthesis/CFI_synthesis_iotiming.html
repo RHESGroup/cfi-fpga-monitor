@@ -1,0 +1,131 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file CFI_synthesis.ncd.
+Design name: CFI_FPGA_TOP
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: 6
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file CFI_synthesis.ncd.
+Design name: CFI_FPGA_TOP
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: CFI_FPGA_TOP
+// Package: TQFP144
+// ncd File: CFI_synthesis.ncd
+// Version: Diamond (64-bit) 3.11.0.396.4
+// Written on Mon Oct 31 12:27:40 2022
+// M: Minimum Performance Grade
+// iotiming CFI_synthesis.ncd CFI_synthesis.prf -gui -msgset /media/sf_Shared/cfi-fpga-monitor/syn/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port               Clock        Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+cpu_fpga_bus_a[0]  cpu_fpga_clk R     0.714      5       0.222     6
+cpu_fpga_bus_a[1]  cpu_fpga_clk R     0.840      5       0.114     6
+cpu_fpga_bus_a[2]  cpu_fpga_clk R     0.714      5       0.222     6
+cpu_fpga_bus_d[0]  cpu_fpga_clk R     2.128      5      -0.297     M
+cpu_fpga_bus_d[10] cpu_fpga_clk R     0.264      5       0.603     5
+cpu_fpga_bus_d[11] cpu_fpga_clk R     0.685      5       0.249     6
+cpu_fpga_bus_d[12] cpu_fpga_clk R     0.040      5       0.788     5
+cpu_fpga_bus_d[13] cpu_fpga_clk R     0.293      5       0.572     5
+cpu_fpga_bus_d[14] cpu_fpga_clk R    -0.109      M       0.989     5
+cpu_fpga_bus_d[15] cpu_fpga_clk R    -0.109      M       0.989     5
+cpu_fpga_bus_d[1]  cpu_fpga_clk R     2.032      5      -0.261     M
+cpu_fpga_bus_d[2]  cpu_fpga_clk R     1.694      5      -0.158     M
+cpu_fpga_bus_d[3]  cpu_fpga_clk R     1.590      5      -0.121     M
+cpu_fpga_bus_d[4]  cpu_fpga_clk R     1.598      5      -0.124     M
+cpu_fpga_bus_d[5]  cpu_fpga_clk R     1.940      5      -0.232     M
+cpu_fpga_bus_d[6]  cpu_fpga_clk R     1.569      5      -0.130     M
+cpu_fpga_bus_d[7]  cpu_fpga_clk R     2.025      5      -0.274     M
+cpu_fpga_bus_d[8]  cpu_fpga_clk R     1.416      5      -0.078     M
+cpu_fpga_bus_d[9]  cpu_fpga_clk R     1.066      5       0.034     M
+cpu_fpga_bus_ne1   cpu_fpga_clk R     2.832      5      -0.450     M
+cpu_fpga_bus_nwe   cpu_fpga_clk R     4.877      5      -0.317     M
+cpu_fpga_rst       cpu_fpga_clk R     7.671      5      -0.140     M
+
+
+// Clock to Output Delay
+
+Port           Clock        Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+cpu_fpga_int_n cpu_fpga_clk R    10.298         5        3.380          M
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with hold speed: 6
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

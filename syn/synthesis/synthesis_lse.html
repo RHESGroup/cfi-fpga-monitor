@@ -1,0 +1,374 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Oct 31 12:27:12 2022
+
+
+Command Line:  synthesis -f CFI_synthesis_lattice.synproj -gui -msgset /media/sf_Shared/cfi-fpga-monitor/syn/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 5.
+The -t option is TQFP144.
+The -d option is LCMXO2-7000HE.
+Using package TQFP144.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-7000HE
+
+### Package : TQFP144
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = CFI_FPGA_TOP.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p /media/sf_Shared/cfi-fpga-monitor/syn/synthesis (searchpath added)
+-p /media/sf_Shared/cfi-fpga-monitor/syn (searchpath added)
+VHDL library = work
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/ADDER_GENERIC.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONSTANTS.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/COMP_EQUAL_GENERIC.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/INPUT_DETECTOR.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/MUX21_GENERIC.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/REGISTER_GENERIC.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd
+VHDL design file = /media/sf_Shared/cfi-fpga-monitor/rtl/ROM_16x8192/ROM_16x8192.vhd
+NGD file = CFI_synthesis.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "/media/sf_Shared/cfi-fpga-monitor/syn/synthesis". VHDL-1504
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/ADDER_GENERIC.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/ADDER_GENERIC.vhd(5): analyzing entity adder_generic. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/ADDER_GENERIC.vhd(12): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONSTANTS.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONSTANTS.vhd(5): analyzing package cfi_constants. VHDL-1014
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd(6): analyzing entity cfi_control_unit. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd(37): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/REGISTER_GENERIC.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/REGISTER_GENERIC.vhd(5): analyzing entity register_generic. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/REGISTER_GENERIC.vhd(14): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/COMP_EQUAL_GENERIC.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/COMP_EQUAL_GENERIC.vhd(5): analyzing entity comp_equal_generic. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/COMP_EQUAL_GENERIC.vhd(12): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/INPUT_DETECTOR.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/INPUT_DETECTOR.vhd(6): analyzing entity input_detector. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/INPUT_DETECTOR.vhd(19): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/ROM_16x8192/ROM_16x8192.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/ROM_16x8192/ROM_16x8192.vhd(14): analyzing entity rom_16x8192. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/ROM_16x8192/ROM_16x8192.vhd(23): analyzing architecture structure. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/MUX21_GENERIC.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/MUX21_GENERIC.vhd(5): analyzing entity mux21_generic. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/MUX21_GENERIC.vhd(13): analyzing architecture behavioral. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd(14): analyzing entity ram_dq_16x1024. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd(25): analyzing architecture structure. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+Analyzing VHDL file /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd. VHDL-1481
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd(6): analyzing entity cfi_fpga_top. VHDL-1012
+INFO - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd(21): analyzing architecture structural. VHDL-1010
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+unit CFI_FPGA_TOP is not yet analyzed. VHDL-1485
+/media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd(6): executing CFI_FPGA_TOP(STRUCTURAL)
+
+WARNING - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd(19): replacing existing netlist CFI_FPGA_TOP(STRUCTURAL). VHDL-1205
+Top module name (VHDL): CFI_FPGA_TOP
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c7000.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Top-level module name = CFI_FPGA_TOP.
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_noe 's net has no driver and is unused.
+INFO - synthesis: Extracted state machine for register '\CU/STATE' with one-hot encoding
+State machine has 8 reachable states with original encodings of:
+
+ 000 
+
+ 001 
+
+ 010 
+
+ 011 
+
+ 100 
+
+ 101 
+
+ 110 
+
+ 111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 00000001
+
+ 001 -> 00000010
+
+ 010 -> 00000100
+
+ 011 -> 00001000
+
+ 100 -> 00010000
+
+ 101 -> 00100000
+
+ 110 -> 01000000
+
+ 111 -> 10000000
+
+INFO - synthesis: Extracted state machine for register '\ID/STATE' with gray encoding
+State machine has 3 reachable states with original encodings of:
+
+ 00 
+
+ 01 
+
+ 10 
+
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+
+
+
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_a[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port cpu_fpga_bus_noe 's net has no driver and is unused.
+WARNING - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd(246): Register \CU/STATE_FSM_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: /media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd(250): Register \CU/MICROPROGRAM_i0_i16 is stuck at Zero. VDB-5013
+GSR instance connected to net n1240.
+Duplicate register/latch removal. \CU/STATUS_MASK_i0_i3 is a one-to-one match with \CU/STATUS_MASK_i0_i2.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i9 is a one-to-one match with \CU/MICROPROGRAM_i0_i12.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i13 is a one-to-one match with \CU/MICROPROGRAM_i0_i15.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i14 is a one-to-one match with \CU/MICROPROGRAM_i0_i26.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i17 is a one-to-one match with \CU/MICROPROGRAM_i0_i19.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i18 is a one-to-one match with \CU/MICROPROGRAM_i0_i30.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i21 is a one-to-one match with \CU/MICROPROGRAM_i0_i9.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i25 is a one-to-one match with \CU/MICROPROGRAM_i0_i13.
+Duplicate register/latch removal. \CU/MICROPROGRAM_i0_i29 is a one-to-one match with \CU/MICROPROGRAM_i0_i17.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in CFI_FPGA_TOP_drc.log.
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[5]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[5]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[4]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[4]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[3]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[3]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_noe' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_noe' has no legal load.
+WARNING - synthesis: DRC complete with 8 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CFI_synthesis.ngd.
+
+################### Begin Area Report (CFI_FPGA_TOP)######################
+Number of register bits => 168 of 7209 (2 % )
+CCU2D => 25
+DP8KC => 18
+FD1P3AX => 60
+FD1P3DX => 4
+FD1P3IX => 36
+FD1P3JX => 3
+FD1S3AX => 57
+FD1S3IX => 7
+FD1S3JX => 1
+GSR => 1
+IB => 23
+LUT4 => 131
+OB => 1
+PFUMX => 4
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : cpu_fpga_clk_c, loads : 186
+Clock Enable Nets
+Number of Clock Enables: 21
+Top 10 highest fanout Clock Enables:
+  Net : ID/cpu_fpga_clk_c_enable_50, loads : 19
+  Net : CU/cpu_fpga_clk_c_enable_44, loads : 6
+  Net : CU/cpu_fpga_clk_c_enable_46, loads : 5
+  Net : CU/cpu_fpga_clk_c_enable_20, loads : 3
+  Net : ID/cpu_fpga_clk_c_enable_25, loads : 3
+  Net : CU/cpu_fpga_clk_c_enable_42, loads : 3
+  Net : CU/cpu_fpga_clk_c_enable_35, loads : 3
+  Net : CU/cpu_fpga_clk_c_enable_26, loads : 3
+  Net : CU/cpu_fpga_clk_c_enable_18, loads : 2
+  Net : CU/cpu_fpga_clk_c_enable_32, loads : 2
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : cpu_fpga_rst_c, loads : 38
+  Net : ID/OPCODE_2, loads : 30
+  Net : ID/OPCODE_1, loads : 28
+  Net : CU/SECURE_EDGE_TABLE_CE, loads : 27
+  Net : ID/OPCODE_0, loads : 26
+  Net : ID/n2775, loads : 19
+  Net : ID/cpu_fpga_clk_c_enable_50, loads : 19
+  Net : CU/n1583, loads : 18
+  Net : CU/INPUT_REG_CE, loads : 15
+  Net : SECURE_EDGE_REG/SECURE_EDGE_REGOUT_12, loads : 13
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets cpu_fpga_clk_c]          |  200.000 MHz|  114.260 MHz|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 213.664  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.517  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

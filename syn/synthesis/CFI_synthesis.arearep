@@ -1,0 +1,178 @@
+----------------------------------------------------------------------
+Report for cell CFI_FPGA_TOP.TECH
+Register bits:  168 of 7209 (2.330%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        25          100.0
+                              DP8KC        18          100.0
+                            FD1P3AX        60          100.0
+                            FD1P3DX         4          100.0
+                            FD1P3IX        36          100.0
+                            FD1P3JX         3          100.0
+                            FD1S3AX        57          100.0
+                            FD1S3IX         7          100.0
+                            FD1S3JX         1          100.0
+                                GSR         1          100.0
+                                 IB        23          100.0
+                               LUT4       131          100.0
+                                 OB         1          100.0
+                              PFUMX         4          100.0
+SUB MODULES
+                   ADDER_GENERIC(4)         1
+                   CFI_CONTROL_UNIT         1
+             COMP_EQUAL_GENERIC(13)         1
+          COMP_EQUAL_GENERIC(13)_U5         1
+             COMP_EQUAL_GENERIC(16)         1
+              COMP_EQUAL_GENERIC(4)         1
+                     INPUT_DETECTOR         1
+                     RAM_DQ_16x1024         1
+                  RAM_DQ_16x1024_U2         1
+               REGISTER_GENERIC(10)         1
+            REGISTER_GENERIC(10)_U1         1
+               REGISTER_GENERIC(13)         1
+            REGISTER_GENERIC(13)_U4         1
+               REGISTER_GENERIC(16)         1
+            REGISTER_GENERIC(16)_U0         1
+            REGISTER_GENERIC(16)_U3         1
+            REGISTER_GENERIC(16)_U6         1
+                        ROM_16x8192         1
+                              TOTAL       389
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(13)_U4.v1
+Instance Path : SECURE_EDGE_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        13           22.8
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(16)_U3.v1
+Instance Path : SECURE_EDGE_TABLE_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        14           24.6
+                              TOTAL        14
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(16)_U0.v1
+Instance Path : SECURE_LABEL_STACK_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        13           22.8
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(16).v1
+Instance Path : SECURE_REGISTER_STACK_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        16           28.1
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell INPUT_DETECTOR.v1
+Instance Path : ID
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX        23           63.9
+                            FD1S3AX         1            1.8
+                            FD1S3IX         1           14.3
+                               LUT4        12            9.2
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell COMP_EQUAL_GENERIC(13)_U5.v1
+Instance Path : SECURE_EDGE_CMP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4           16.0
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell ROM_16x8192.v1
+Instance Path : SECURE_EDGE_TABLE
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              DP8KC        14           77.8
+                              TOTAL        14
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(10)_U1.v1
+Instance Path : SECURE_LABEL_STACK_PTR
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6           24.0
+                            FD1P3AX        10           16.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(10).v1
+Instance Path : SECURE_REGISTER_STACK_PTR
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6           24.0
+                            FD1P3AX        10           16.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(13).v1
+Instance Path : SRC_LABEL_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        13           21.7
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell COMP_EQUAL_GENERIC(4).v1
+Instance Path : TIMER_CMP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2            1.5
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell COMP_EQUAL_GENERIC(16).v1
+Instance Path : SECURE_REGISTER_STACK_CMP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5           20.0
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell REGISTER_GENERIC(16)_U6.v1
+Instance Path : INPUT_REG
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        16           26.7
+                              TOTAL        16
+----------------------------------------------------------------------
+Report for cell COMP_EQUAL_GENERIC(13).v1
+Instance Path : SECURE_LABEL_STACK_CMP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4           16.0
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell RAM_DQ_16x1024.v1
+Instance Path : SECURE_REGISTER_STACK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              DP8KC         2           11.1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell CFI_CONTROL_UNIT.v1
+Instance Path : CU
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        11           18.3
+                            FD1P3IX        13           36.1
+                            FD1P3JX         3          100.0
+                            FD1S3IX         6           85.7
+                            FD1S3JX         1          100.0
+                               LUT4        93           71.0
+                              PFUMX         2           50.0
+                              TOTAL       129
+----------------------------------------------------------------------
+Report for cell RAM_DQ_16x1024_U2.v1
+Instance Path : SECURE_LABEL_STACK
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              DP8KC         2           11.1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ADDER_GENERIC(4).v1
+Instance Path : TIMER_INC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         4          100.0
+                               LUT4         4            3.1
+                              TOTAL         8

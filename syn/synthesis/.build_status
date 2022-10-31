@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Timing">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="2" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1667215674"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1667215676"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1667215645">
+            <Task name="Map" build_result="2" update_result="0" update_time="1667215645"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1667215646"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="2" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1667215658">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1667215658"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1667215659"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1667215660"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1667215634">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1667215634"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1667215634"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1667215568"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/CFI_synthesis_map.vdb" last_build_time="1667215646" last_build_size="118567"/>
+        <Report name="CFI_synthesis.bgn" last_build_time="1667215677" last_build_size="4538"/>
+        <Report name="CFI_synthesis.bit" last_build_time="1667215674" last_build_size="45628"/>
+        <Report name="CFI_synthesis.ior" last_build_time="1667215661" last_build_size="3176"/>
+        <Report name="CFI_synthesis.jed" last_build_time="1667215677" last_build_size="1454088"/>
+        <Report name="CFI_synthesis.lsedata" last_build_time="1667215633" last_build_size="507524"/>
+        <Report name="CFI_synthesis.ncd" last_build_time="1667215659" last_build_size="433135"/>
+        <Report name="CFI_synthesis.ngd" last_build_time="1667215635" last_build_size="281793"/>
+        <Report name="CFI_synthesis.tw1" last_build_time="1667215647" last_build_size="8785"/>
+        <Report name="CFI_synthesis.twr" last_build_time="1667215660" last_build_size="50830"/>
+        <Report name="CFI_synthesis_map.ncd" last_build_time="1667215646" last_build_size="330303"/>
+    </Strategy>
+</BuildStatus>

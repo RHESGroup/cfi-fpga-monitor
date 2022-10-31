@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="ROM_16x8192" module="ROM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2019 10 03 09:24:58.612" version="5.4" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="" type="" modified="2019 10 03 09:24:58.611"/>
+		<File name="ROM_16x8192.lpc" type="lpc" modified="2019 10 03 09:24:55.214"/>
+		<File name="ROM_16x8192.vhd" type="top_level_vhdl" modified="2019 10 03 09:24:55.631"/>
+		<File name="ROM_16x8192_tmpl.vhd" type="template_vhdl" modified="2019 10 03 09:24:55.632"/>
+		<File name="e:/dropbox (cini)/group - cybersecurity/control flow integrity/code/hdl/rom_16x8192/secure_edge_table_initializer/secure_edge_table.mem" type="mem" modified="2019 10 03 09:10:54.521"/>
+		<File name="tb_ROM_16x8192_tmpl.vhd" type="testbench_vhdl" modified="2019 10 03 09:24:55.654"/>
+  </Package>
+</DiamondModule>

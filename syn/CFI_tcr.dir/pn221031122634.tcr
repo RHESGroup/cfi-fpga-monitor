@@ -1,0 +1,8 @@
+#Start recording tcl command: 10/31/2022 12:24:23
+#Project Location: /media/sf_Shared/cfi-fpga-monitor/syn; Project name: CFI
+prj_project open "/media/sf_Shared/cfi-fpga-monitor/syn/CFI.ldf"
+prj_src remove "/media/sf_Shared/cfi-fpga-monitor/syn/ADDER_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/MUX21_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/REGISTER_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/COMP_EQUAL_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/CFI_FPGA_TOP.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/CFI_CONSTANTS.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/INPUT_DETECTOR.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/CFI_CONTROL_UNIT.vhd" "/media/sf_Shared/cfi-fpga-monitor/syn/ROM_16x8192/ROM_16x8192.vhd"
+prj_src add "/media/sf_Shared/cfi-fpga-monitor/rtl/ADDER_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONSTANTS.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/CFI_CONTROL_UNIT.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/CFI_FPGA_TOP.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/COMP_EQUAL_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/INPUT_DETECTOR.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/MUX21_GENERIC.vhd" "/media/sf_Shared/cfi-fpga-monitor/rtl/REGISTER_GENERIC.vhd"
+prj_src add "/media/sf_Shared/cfi-fpga-monitor/rtl/RAM_DQ_16x1024/RAM_DQ_16x1024.vhd"
+prj_src add "/media/sf_Shared/cfi-fpga-monitor/rtl/ROM_16x8192/ROM_16x8192.vhd"
+#Stop recording: 10/31/2022 12:26:34

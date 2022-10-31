@@ -1,0 +1,4 @@
+#Start recording tcl command: 10/31/2022 12:38:49
+#Project Location: /media/sf_Shared/cfi-fpga-monitor/syn; Project name: CFI
+prj_project open "/media/sf_Shared/cfi-fpga-monitor/syn/CFI.ldf"
+#Stop recording: 10/31/2022 12:42:37

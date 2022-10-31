@@ -1,0 +1,291 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file CFI_synthesis_map.ncd.
+Design name: CFI_FPGA_TOP
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: 5
+Loading device for application trce from file 'xo2c7000.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Mon Oct 31 12:27:26 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CFI_synthesis.tw1 -gui -msgset /media/sf_Shared/cfi-fpga-monitor/syn/promote.xml CFI_synthesis_map.ncd CFI_synthesis.prf 
+Design file:     CFI_synthesis_map.ncd
+Preference file: CFI_synthesis.prf
+Device,speed:    LCMXO2-7000HE,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY 90.000000 MHz (0 errors)</A></LI>            1925 items scored, 0 timing errors detected.
+Report:  109.385MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY 90.000000 MHz ;
+            1925 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.969ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SECURE_LABEL_STACK_REG/Q_i13  (from cpu_fpga_clk_c +)
+   Destination:    FF         Data in        CU/TIMER_RST_85  (to cpu_fpga_clk_c +)
+
+   Delay:               8.893ns  (42.1% logic, 57.9% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.893ns physical path delay SECURE_LABEL_STACK_REG/SLICE_87 to CU/SLICE_113 meets
+     11.111ns delay constraint less
+      0.249ns CE_SET requirement (totaling 10.862ns) by 1.969ns
+
+ Physical Path Details:
+
+      Data path SECURE_LABEL_STACK_REG/SLICE_87 to CU/SLICE_113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 */SLICE_87.CLK to *G/SLICE_87.Q0 SECURE_LABEL_STACK_REG/SLICE_87 (from cpu_fpga_clk_c)
+ROUTE         1   e 1.030 *G/SLICE_87.Q0 to *P/SLICE_24.A0 SECURE_LABEL_STACK_REGOUT_12
+C0TOFCO_DE  ---     0.905 *P/SLICE_24.A0 to */SLICE_24.FCO SECURE_LABEL_STACK_CMP/SLICE_24
+ROUTE         1   e 0.001 */SLICE_24.FCO to */SLICE_23.FCI SECURE_LABEL_STACK_CMP/n3673
+FCITOFCO_D  ---     0.146 */SLICE_23.FCI to */SLICE_23.FCO SECURE_LABEL_STACK_CMP/SLICE_23
+ROUTE         1   e 0.001 */SLICE_23.FCO to */SLICE_22.FCI SECURE_LABEL_STACK_CMP/n3674
+FCITOFCO_D  ---     0.146 */SLICE_22.FCI to */SLICE_22.FCO SECURE_LABEL_STACK_CMP/SLICE_22
+ROUTE         1   e 0.001 */SLICE_22.FCO to */SLICE_21.FCI SECURE_LABEL_STACK_CMP/n3675
+FCITOF1_DE  ---     0.569 */SLICE_21.FCI to *P/SLICE_21.F1 SECURE_LABEL_STACK_CMP/SLICE_21
+ROUTE         1   e 1.030 *P/SLICE_21.F1 to */SLICE_131.A1 RETURN_VALID
+CTOF_DEL    ---     0.452 */SLICE_131.A1 to */SLICE_131.F1 CU/SLICE_131
+ROUTE         4   e 1.030 */SLICE_131.F1 to */SLICE_115.C1 CU/INTERRUPT_N_146_1
+CTOOFX_DEL  ---     0.661 */SLICE_115.C1 to *LICE_115.OFX0 CU/i43/SLICE_115
+ROUTE         1   e 1.030 *LICE_115.OFX0 to */SLICE_138.B1 CU/n14
+CTOF_DEL    ---     0.452 */SLICE_138.B1 to */SLICE_138.F1 CU/SLICE_138
+ROUTE         2   e 1.030 */SLICE_138.F1 to */SLICE_113.CE CU/cpu_fpga_clk_c_enable_32 (to cpu_fpga_clk_c)
+                  --------
+                    8.893   (42.1% logic, 57.9% route), 8 logic levels.
+
+Report:  109.385MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 90.000000 MHz ;               |   90.000 MHz|  109.385 MHz|   8  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: cpu_fpga_clk_c   Source: cpu_fpga_clk.PAD   Loads: 120
+   Covered under: FREQUENCY 90.000000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1925 paths, 1 nets, and 1188 connections (94.96% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Mon Oct 31 12:27:26 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CFI_synthesis.tw1 -gui -msgset /media/sf_Shared/cfi-fpga-monitor/syn/promote.xml CFI_synthesis_map.ncd CFI_synthesis.prf 
+Design file:     CFI_synthesis_map.ncd
+Preference file: CFI_synthesis.prf
+Device,speed:    LCMXO2-7000HE,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY 90.000000 MHz (0 errors)</A></LI>            1925 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY 90.000000 MHz ;
+            1925 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.441ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CU/MICROPROGRAM_i0_i21  (from cpu_fpga_clk_c +)
+   Destination:    FF         Data in        CU/MICROPROGRAM_i0_i21  (to cpu_fpga_clk_c +)
+
+   Delay:               0.428ns  (53.3% logic, 46.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.428ns physical path delay SLICE_59 to SLICE_59 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.441ns
+
+ Physical Path Details:
+
+      Data path SLICE_59 to SLICE_59:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133   SLICE_59.CLK to    SLICE_59.Q0 SLICE_59 (from cpu_fpga_clk_c)
+ROUTE         3   e 0.199    SLICE_59.Q0 to    SLICE_59.M0 MICROPROGRAM_21
+MTOOFX_DEL  ---     0.095    SLICE_59.M0 to  SLICE_59.OFX0 SLICE_59
+ROUTE         1   e 0.001  SLICE_59.OFX0 to   SLICE_59.DI0 n4306 (to cpu_fpga_clk_c)
+                  --------
+                    0.428   (53.3% logic, 46.7% route), 2 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 90.000000 MHz ;               |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: cpu_fpga_clk_c   Source: cpu_fpga_clk.PAD   Loads: 120
+   Covered under: FREQUENCY 90.000000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1925 paths, 1 nets, and 1188 connections (94.96% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

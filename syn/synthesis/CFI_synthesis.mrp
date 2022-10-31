@@ -1,0 +1,666 @@
+
+         Lattice Mapping Report File for Design Module 'CFI_FPGA_TOP'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-7000HE -t TQFP144 -s 5 -oc Commercial
+     CFI_synthesis.ngd -o CFI_synthesis_map.ncd -pr CFI_synthesis.prf -mp
+     CFI_synthesis.mrp -lpf
+     /media/sf_Shared/cfi-fpga-monitor/syn/synthesis/CFI_synthesis.lpf -lpf
+     /media/sf_Shared/cfi-fpga-monitor/syn/CFI.lpf -gui -msgset
+     /media/sf_Shared/cfi-fpga-monitor/syn/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-7000HETQFP144
+Target Performance:   5
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  10/31/22  12:27:24
+
+Design Summary
+--------------
+
+   Number of registers:    168 out of  7209 (2%)
+      PFU registers:          168 out of  6864 (2%)
+      PIO registers:            0 out of   345 (0%)
+   Number of SLICEs:       145 out of  3432 (4%)
+      SLICEs as Logic/ROM:    145 out of  3432 (4%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:         25 out of  3432 (1%)
+   Number of LUT4s:        180 out of  6864 (3%)
+      Number used as logic LUTs:        130
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       50
+      Number used as shift registers:     0
+   Number of PIO sites used: 24 + 4(JTAG) out of 115 (24%)
+   Number of block RAMs:  18 out of 26 (69%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+     Net cpu_fpga_clk_c: 120 loads, 120 rising, 0 falling (Driver: PIO
+     cpu_fpga_clk )
+
+                                    Page 1
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+Design Summary (cont)
+---------------------
+   Number of Clock Enables:  21
+     Net ID/cpu_fpga_clk_c_enable_50: 10 loads, 10 LSLICEs
+     Net cpu_fpga_clk_c_enable_7: 1 loads, 1 LSLICEs
+     Net ID/cpu_fpga_clk_c_enable_25: 2 loads, 2 LSLICEs
+     Net SECURE_EDGE_TABLE_CE: 28 loads, 0 LSLICEs
+     Net SECURE_LABEL_STACK_PTR_CE: 6 loads, 6 LSLICEs
+     Net SECURE_REGISTER_STACK_PTR_CE: 6 loads, 6 LSLICEs
+     Net SRC_LABEL_REG_CE: 7 loads, 7 LSLICEs
+     Net INPUT_REG_CE: 8 loads, 8 LSLICEs
+     Net SECURE_REGISTER_STACK_CE: 4 loads, 0 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_20: 2 loads, 2 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_32: 2 loads, 2 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_16: 1 loads, 1 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_18: 2 loads, 2 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_10: 1 loads, 1 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_46: 5 loads, 5 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_26: 2 loads, 2 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_44: 6 loads, 6 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_42: 1 loads, 1 LSLICEs
+     Net TIMER_CE: 2 loads, 2 LSLICEs
+     Net CU/cpu_fpga_clk_c_enable_35: 2 loads, 2 LSLICEs
+     Net SECURE_LABEL_STACK_CE: 4 loads, 0 LSLICEs
+   Number of LSRs:  6
+     Net cpu_fpga_rst_c: 23 loads, 5 LSLICEs
+     Net ID/STATE_0: 2 loads, 2 LSLICEs
+     Net ID/n2775: 10 loads, 10 LSLICEs
+     Net ID/n2774: 2 loads, 2 LSLICEs
+     Net TIMER_RST: 2 loads, 2 LSLICEs
+     Net CU/n1583: 15 loads, 15 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cpu_fpga_rst_c: 37 loads
+     Net OPCODE_2: 31 loads
+     Net OPCODE_1: 29 loads
+     Net SECURE_EDGE_TABLE_CE: 28 loads
+     Net OPCODE_0: 27 loads
+     Net CU/n1583: 16 loads
+     Net SECURE_EDGE_REGOUT_0: 14 loads
+     Net SECURE_EDGE_REGOUT_1: 14 loads
+     Net SECURE_EDGE_REGOUT_2: 14 loads
+     Net SECURE_EDGE_REGOUT_3: 14 loads
+
+
+
+
+   Number of warnings:  8
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: input pad net 'cpu_fpga_bus_a[5]' has no legal load.
+WARNING - map: input pad net 'cpu_fpga_bus_a[4]' has no legal load.
+WARNING - map: input pad net 'cpu_fpga_bus_a[3]' has no legal load.
+WARNING - map: input pad net 'cpu_fpga_bus_noe' has no legal load.
+
+                                    Page 2
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port
+     cpu_fpga_bus_a[5:0](5)...logic will be discarded.
+WARNING - map: IO buffer missing for top level port
+     cpu_fpga_bus_a[5:0](4)...logic will be discarded.
+WARNING - map: IO buffer missing for top level port
+     cpu_fpga_bus_a[5:0](3)...logic will be discarded.
+WARNING - map: IO buffer missing for top level port cpu_fpga_bus_noe...logic
+     will be discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_a[1]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_a[0]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_a[2]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_int_n      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[15]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[14]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[13]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[12]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[11]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[10]  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[9]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[8]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[7]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[6]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[5]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[4]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[3]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[2]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[1]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_d[0]   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+IO (PIO) Attributes (cont)
+--------------------------
+| cpu_fpga_bus_nwe    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_bus_ne1    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_clk        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| cpu_fpga_rst        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal n2984 was merged into signal cpu_fpga_rst_c
+Signal ID/n4287 was merged into signal ID/STATE_0
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_0/S1 undriven or does not drive anything
+     - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_0/S0 undriven or does not drive anything
+     - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_0/CI undriven or does not drive anything
+     - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_10/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_10/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_12/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_12/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_13/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_CMP/B_12__I_0_13/CO undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_16/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_16/CO undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_0/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_0/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_0/CI undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_11/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_11/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_13/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_13/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_15/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_CMP/B_15__I_0_15/S0 undriven or does not drive
+     anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+Removed logic (cont)
+--------------------
+Signal SECURE_REGISTER_STACK_PTR/Q_362_add_4_11/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_PTR/Q_362_add_4_11/CO undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_PTR/Q_362_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_REGISTER_STACK_PTR/Q_362_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_PTR/Q_360_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_PTR/Q_360_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_PTR/Q_360_add_4_11/S1 undriven or does not drive
+     anything - clipped.
+Signal SECURE_LABEL_STACK_PTR/Q_360_add_4_11/CO undriven or does not drive
+     anything - clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_0/S1 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_0/S0 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_0/CI undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_10/S1 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_10/S0 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_12/S1 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_12/S0 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_13/S0 undriven or does not drive anything -
+     clipped.
+Signal SECURE_EDGE_CMP/B_12__I_0_13/CO undriven or does not drive anything -
+     clipped.
+Block CU/i1766_1_lut was optimized away.
+Block ID/i417_1_lut_rep_66 was optimized away.
+Block i1 was optimized away.
+Block i2 was optimized away.
+
+Memory Usage
+------------
+
+    
+         
+    INFO: Design contains EBR with GSR enabled. The GSR is only applicable for
+         output registers except FIFO. 
+    /SECURE_EDGE_TABLE:
+    EBRs: 14
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR ROM_16x8192_0_15_0:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+
+                                    Page 5
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+Memory Usage (cont)
+-------------------
+    -Contains EBR ROM_16x8192_0_1_14:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_0_15:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_2_13:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_3_12:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_4_11:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_5_10:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_6_9:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_7_8:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_8_7:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_9_6:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_10_5:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_11_4:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+
+                                    Page 6
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+Memory Usage (cont)
+-------------------
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+    -Contains EBR ROM_16x8192_0_12_3:  TYPE= DP8KC,  Width_A= 1,  Depth_A= 8192,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= secure_edge_table.mem,  MEM_LPC_FILE=
+         ROM_16x8192.lpc
+/SECURE_LABEL_STACK:
+    EBRs: 2
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR RAM_DQ_16x1024_0_1_0:  TYPE= DP8KC,  Width_A= 4,  Depth_A=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE=
+         RAM_DQ_16x1024.lpc
+    -Contains EBR RAM_DQ_16x1024_0_0_1:  TYPE= DP8KC,  Width_A= 9,  Depth_A=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE=
+         RAM_DQ_16x1024.lpc
+/SECURE_REGISTER_STACK:
+    EBRs: 2
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR RAM_DQ_16x1024_0_1_0:  TYPE= DP8KC,  Width_A= 7,  Depth_A=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE=
+         RAM_DQ_16x1024.lpc
+    -Contains EBR RAM_DQ_16x1024_0_0_1:  TYPE= DP8KC,  Width_A= 9,  Depth_A=
+         1024,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= ENABLED,  MEM_INIT_FILE= INIT_ALL_0s,  MEM_LPC_FILE=
+         RAM_DQ_16x1024.lpc
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_15_0
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_1_14
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_0_15
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_2_13
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_3_12
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_4_11
+
+                                    Page 7
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+ASIC Components (cont)
+----------------------
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_5_10
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_6_9
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_7_8
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_8_7
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_9_6
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_10_5
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_11_4
+         Type: DP8KC
+Instance Name: SECURE_EDGE_TABLE/ROM_16x8192_0_12_3
+         Type: DP8KC
+Instance Name: SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0
+         Type: DP8KC
+Instance Name: SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_0_1
+         Type: DP8KC
+Instance Name: SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0
+         Type: DP8KC
+Instance Name: SECURE_LABEL_STACK/RAM_DQ_16x1024_0_0_1
+         Type: DP8KC
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is
+        'cpu_fpga_rst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'cpu_fpga_rst_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 38 
+
+     Type and instance name of component: 
+   Register : CU/TIMER_RST_85
+   Register : CU/INTERRUPT_82
+   Register : CU/CONTROL_WORD__i0
+   Register : CU/STATE_FSM_i7
+   Register : CU/STATUS_MASK_i0_i0
+
+                                    Page 8
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+GSR Usage (cont)
+----------------
+   Register : CU/STATE_FSM_i5
+   Register : CU/STATE_FSM_i4
+   Register : CU/STATE_FSM_i3
+   Register : CU/STATE_FSM_i2
+   Register : CU/STATE_FSM_i1
+   Register : CU/STATUS_MASK_i0_i3
+   Register : CU/MICROPROGRAM_i0_i14
+   Register : CU/MICROPROGRAM_i0_i18
+   Register : CU/MICROPROGRAM_i0_i21
+   Register : CU/MICROPROGRAM_i0_i24
+   Register : CU/MICROPROGRAM_i0_i25
+   Register : CU/MICROPROGRAM_i0_i29
+   Register : CU/STATUS_MASK_i0_i1
+   Register : CU/CONTROL_WORD__i1
+   Register : CU/CONTROL_WORD__i11
+   Register : CU/STATE_FSM_i6
+   Register : CU/CONTROL_WORD__i10
+   Register : CU/CONTROL_WORD__i9
+   Register : CU/CONTROL_WORD__i3
+   Register : CU/TIMER_CE_84
+   Register : CU/OP_i0_i0
+   Register : CU/OP_i0_i2
+   Register : CU/OP_i0_i1
+   Register : CU/CONTROL_WORD__i2
+   Register : CU/CONTROL_WORD__i4
+   Register : CU/CONTROL_WORD__i5
+   Register : CU/CONTROL_WORD__i6
+   Register : CU/CONTROL_WORD__i7
+   Register : CU/CONTROL_WORD__i8
+   Register : TIMER_INC/Q_361__i0
+   Register : TIMER_INC/Q_361__i1
+   Register : TIMER_INC/Q_361__i2
+   Register : TIMER_INC/Q_361__i3
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'cpu_fpga_rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 24 
+
+     Type and instance name of component: 
+   Register : ID/DATAOUT_i8
+   Register : ID/DATAOUT_i7
+   Register : ID/DATAOUT_i6
+   Register : ID/DATAOUT_i5
+   Register : ID/DATAOUT_i4
+   Register : ID/INPUT_DETECTED_28
+   Register : ID/DATAOUT_i3
+   Register : ID/OPC_i0
+   Register : ID/DATAOUT_i2
+   Register : ID/DATAOUT_i1
+
+                                    Page 9
+
+
+
+
+Design:  CFI_FPGA_TOP                                  Date:  10/31/22  12:27:24
+
+GSR Usage (cont)
+----------------
+   Register : ID/OPCODE_i2
+   Register : ID/OPCODE_i1
+   Register : ID/OPC_i2
+   Register : ID/STATE_i1
+   Register : ID/OPC_i1
+   Register : ID/DATAOUT_i15
+   Register : ID/DATAOUT_i0
+   Register : ID/OPCODE_i0
+   Register : ID/DATAOUT_i14
+   Register : ID/DATAOUT_i13
+   Register : ID/DATAOUT_i12
+   Register : ID/DATAOUT_i11
+   Register : ID/DATAOUT_i10
+   Register : ID/DATAOUT_i9
+
+     EBR components with enabled GSR
+-------------------------------
+
+     These EBR components have the GSR property set to ENABLED. The components
+     will respond to the asynchronous reset signal 'cpu_fpga_rst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   DP8KC = 18
+
+     Type and instance name of component: 
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_15_0
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_1_14
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_0_15
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_2_13
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_3_12
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_4_11
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_5_10
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_6_9
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_7_8
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_8_7
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_9_6
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_10_5
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_11_4
+   DP8KC : SECURE_EDGE_TABLE/ROM_16x8192_0_12_3
+   DP8KC : SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0
+   DP8KC : SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_0_1
+   DP8KC : SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0
+   DP8KC : SECURE_LABEL_STACK/RAM_DQ_16x1024_0_0_1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 194 MB
+        
+
+
+
+
+
+                                   Page 10
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

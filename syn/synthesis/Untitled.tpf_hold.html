@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Mon Oct 31 12:28:22 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     CFI_FPGA_TOP
+Device,speed:    LCMXO2-7000HE,M
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="FREQUENCY 90.000000 MH"></A>================================================================================
+Preference: FREQUENCY 90.000000 MHz ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.221ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SECURE_REGISTER_STACK_PTR/SLICE_12">SECURE_REGISTER_STACK_PTR/Q_362__i8</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0">SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.327ns  (40.7% logic, 59.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.327ns physical path delay SECURE_REGISTER_STACK_PTR/SLICE_12 to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.221ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R14C31A.CLK,R14C31A.Q1,SECURE_REGISTER_STACK_PTR/SLICE_12:ROUTE, 0.194,R14C31A.Q1,EBR_R13C30.ADA11,SECURE_REGISTER_STACK_PTR_OUT_8">Data path</A> SECURE_REGISTER_STACK_PTR/SLICE_12 to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R14C31A.CLK to     R14C31A.Q1 <A href="#@comp:SECURE_REGISTER_STACK_PTR/SLICE_12">SECURE_REGISTER_STACK_PTR/SLICE_12</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         3     0.194<A href="#@net:SECURE_REGISTER_STACK_PTR_OUT_8:R14C31A.Q1:EBR_R13C30.ADA11:0.194">     R14C31A.Q1 to EBR_R13C30.ADA11</A> <A href="#@net:SECURE_REGISTER_STACK_PTR_OUT_8">SECURE_REGISTER_STACK_PTR_OUT_8</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.327   (40.7% logic, 59.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R14C31A.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SECURE_REGISTER_STACK_PTR/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R14C31A.CLK:0.880">       49.PADDI to R14C31A.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R13C30.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R13C30.CLKA:0.934">       49.PADDI to EBR_R13C30.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.222ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SECURE_LABEL_STACK_PTR/SLICE_9">SECURE_LABEL_STACK_PTR/Q_360__i2</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0">SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.328ns  (40.5% logic, 59.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.328ns physical path delay SECURE_LABEL_STACK_PTR/SLICE_9 to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.222ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R14C23B.CLK,R14C23B.Q1,SECURE_LABEL_STACK_PTR/SLICE_9:ROUTE, 0.195,R14C23B.Q1,EBR_R13C21.ADA5,SECURE_LABEL_STACK_PTR_OUT_2">Data path</A> SECURE_LABEL_STACK_PTR/SLICE_9 to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R14C23B.CLK to     R14C23B.Q1 <A href="#@comp:SECURE_LABEL_STACK_PTR/SLICE_9">SECURE_LABEL_STACK_PTR/SLICE_9</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         3     0.195<A href="#@net:SECURE_LABEL_STACK_PTR_OUT_2:R14C23B.Q1:EBR_R13C21.ADA5:0.195">     R14C23B.Q1 to EBR_R13C21.ADA5</A> <A href="#@net:SECURE_LABEL_STACK_PTR_OUT_2">SECURE_LABEL_STACK_PTR_OUT_2</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.328   (40.5% logic, 59.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R14C23B.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SECURE_LABEL_STACK_PTR/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R14C23B.CLK:0.880">       49.PADDI to R14C23B.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R13C21.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R13C21.CLKA:0.934">       49.PADDI to EBR_R13C21.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.222ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SECURE_LABEL_STACK_PTR/SLICE_9">SECURE_LABEL_STACK_PTR/Q_360__i1</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0">SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.328ns  (40.5% logic, 59.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.328ns physical path delay SECURE_LABEL_STACK_PTR/SLICE_9 to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.222ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R14C23B.CLK,R14C23B.Q0,SECURE_LABEL_STACK_PTR/SLICE_9:ROUTE, 0.195,R14C23B.Q0,EBR_R13C21.ADA4,SECURE_LABEL_STACK_PTR_OUT_1">Data path</A> SECURE_LABEL_STACK_PTR/SLICE_9 to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R14C23B.CLK to     R14C23B.Q0 <A href="#@comp:SECURE_LABEL_STACK_PTR/SLICE_9">SECURE_LABEL_STACK_PTR/SLICE_9</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         3     0.195<A href="#@net:SECURE_LABEL_STACK_PTR_OUT_1:R14C23B.Q0:EBR_R13C21.ADA4:0.195">     R14C23B.Q0 to EBR_R13C21.ADA4</A> <A href="#@net:SECURE_LABEL_STACK_PTR_OUT_1">SECURE_LABEL_STACK_PTR_OUT_1</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.328   (40.5% logic, 59.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R14C23B.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SECURE_LABEL_STACK_PTR/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R14C23B.CLK:0.880">       49.PADDI to R14C23B.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R13C21.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_LABEL_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R13C21.CLKA:0.934">       49.PADDI to EBR_R13C21.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.281ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CU/SLICE_113">CU/TIMER_RST_85</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:TIMER_INC/SLICE_112">TIMER_INC/Q_361__i3</A>  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+                   FF                        <A href="#@net:TIMER_INC/Q_361__i2">TIMER_INC/Q_361__i2</A>
+
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.281ns physical path delay CU/SLICE_113 to TIMER_INC/SLICE_112 meets
+      0.000ns LSR_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.000ns) by 0.281ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R16C21B.CLK,R16C21B.Q0,CU/SLICE_113:ROUTE, 0.148,R16C21B.Q0,R16C21C.LSR,TIMER_RST">Data path</A> CU/SLICE_113 to TIMER_INC/SLICE_112:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C21B.CLK to     R16C21B.Q0 <A href="#@comp:CU/SLICE_113">CU/SLICE_113</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         2     0.148<A href="#@net:TIMER_RST:R16C21B.Q0:R16C21C.LSR:0.148">     R16C21B.Q0 to R16C21C.LSR   </A> <A href="#@net:TIMER_RST">TIMER_RST</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.281   (47.3% logic, 52.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21B.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to CU/SLICE_113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21B.CLK:0.880">       49.PADDI to R16C21B.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21C.CLK,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to TIMER_INC/SLICE_112:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21C.CLK:0.880">       49.PADDI to R16C21C.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.281ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:CU/SLICE_113">CU/TIMER_RST_85</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:TIMER_INC/SLICE_111">TIMER_INC/Q_361__i1</A>  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+                   FF                        <A href="#@net:TIMER_INC/Q_361__i0">TIMER_INC/Q_361__i0</A>
+
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.281ns physical path delay CU/SLICE_113 to TIMER_INC/SLICE_111 meets
+      0.000ns LSR_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.000ns) by 0.281ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R16C21B.CLK,R16C21B.Q0,CU/SLICE_113:ROUTE, 0.148,R16C21B.Q0,R16C21D.LSR,TIMER_RST">Data path</A> CU/SLICE_113 to TIMER_INC/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C21B.CLK to     R16C21B.Q0 <A href="#@comp:CU/SLICE_113">CU/SLICE_113</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         2     0.148<A href="#@net:TIMER_RST:R16C21B.Q0:R16C21D.LSR:0.148">     R16C21B.Q0 to R16C21D.LSR   </A> <A href="#@net:TIMER_RST">TIMER_RST</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.281   (47.3% logic, 52.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21B.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to CU/SLICE_113:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21B.CLK:0.880">       49.PADDI to R16C21B.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21D.CLK,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to TIMER_INC/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21D.CLK:0.880">       49.PADDI to R16C21D.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.284ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_68">SECURE_EDGE_REG/Q_i10</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_EDGE_TABLE/ROM_16x8192_0_3_12">SECURE_EDGE_TABLE/ROM_16x8192_0_3_12</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.390ns  (34.1% logic, 65.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.390ns physical path delay SLICE_68 to SECURE_EDGE_TABLE/ROM_16x8192_0_3_12 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.284ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R17C24B.CLK,R17C24B.Q0,SLICE_68:ROUTE, 0.257,R17C24B.Q0,EBR_R20C24.ADA10,SECURE_EDGE_REGOUT_10">Data path</A> SLICE_68 to SECURE_EDGE_TABLE/ROM_16x8192_0_3_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R17C24B.CLK to     R17C24B.Q0 <A href="#@comp:SLICE_68">SLICE_68</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE        14     0.257<A href="#@net:SECURE_EDGE_REGOUT_10:R17C24B.Q0:EBR_R20C24.ADA10:0.257">     R17C24B.Q0 to EBR_R20C24.ADA10</A> <A href="#@net:SECURE_EDGE_REGOUT_10">SECURE_EDGE_REGOUT_10</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.390   (34.1% logic, 65.9% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R17C24B.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SLICE_68:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R17C24B.CLK:0.880">       49.PADDI to R17C24B.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R20C24.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_EDGE_TABLE/ROM_16x8192_0_3_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R20C24.CLKA:0.934">       49.PADDI to EBR_R20C24.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.285ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_69">SECURE_EDGE_REG/Q_i12</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_EDGE_TABLE/ROM_16x8192_0_11_4">SECURE_EDGE_TABLE/ROM_16x8192_0_11_4</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.391ns  (34.0% logic, 66.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.391ns physical path delay SLICE_69 to SECURE_EDGE_TABLE/ROM_16x8192_0_11_4 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.285ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R18C27C.CLK,R18C27C.Q0,SLICE_69:ROUTE, 0.258,R18C27C.Q0,EBR_R20C27.ADA12,SECURE_EDGE_REGOUT_12">Data path</A> SLICE_69 to SECURE_EDGE_TABLE/ROM_16x8192_0_11_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C27C.CLK to     R18C27C.Q0 <A href="#@comp:SLICE_69">SLICE_69</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE        14     0.258<A href="#@net:SECURE_EDGE_REGOUT_12:R18C27C.Q0:EBR_R20C27.ADA12:0.258">     R18C27C.Q0 to EBR_R20C27.ADA12</A> <A href="#@net:SECURE_EDGE_REGOUT_12">SECURE_EDGE_REGOUT_12</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.391   (34.0% logic, 66.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R18C27C.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SLICE_69:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R18C27C.CLK:0.880">       49.PADDI to R18C27C.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R20C27.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_EDGE_TABLE/ROM_16x8192_0_11_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R20C27.CLKA:0.934">       49.PADDI to EBR_R20C27.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.305ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_110">CU/TIMER_CE_84</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:TIMER_INC/SLICE_111">TIMER_INC/Q_361__i1</A>  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+                   FF                        <A href="#@net:TIMER_INC/Q_361__i0">TIMER_INC/Q_361__i0</A>
+
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.281ns physical path delay SLICE_110 to TIMER_INC/SLICE_111 meets
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.024ns) by 0.305ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R16C21A.CLK,R16C21A.Q0,SLICE_110:ROUTE, 0.148,R16C21A.Q0,R16C21D.CE,TIMER_CE">Data path</A> SLICE_110 to TIMER_INC/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C21A.CLK to     R16C21A.Q0 <A href="#@comp:SLICE_110">SLICE_110</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         2     0.148<A href="#@net:TIMER_CE:R16C21A.Q0:R16C21D.CE:0.148">     R16C21A.Q0 to R16C21D.CE    </A> <A href="#@net:TIMER_CE">TIMER_CE</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.281   (47.3% logic, 52.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21A.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21A.CLK:0.880">       49.PADDI to R16C21A.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21D.CLK,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to TIMER_INC/SLICE_111:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21D.CLK:0.880">       49.PADDI to R16C21D.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.305ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_110">CU/TIMER_CE_84</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:TIMER_INC/SLICE_112">TIMER_INC/Q_361__i3</A>  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+                   FF                        <A href="#@net:TIMER_INC/Q_361__i2">TIMER_INC/Q_361__i2</A>
+
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.281ns physical path delay SLICE_110 to TIMER_INC/SLICE_112 meets
+     -0.024ns CE_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.024ns) by 0.305ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R16C21A.CLK,R16C21A.Q0,SLICE_110:ROUTE, 0.148,R16C21A.Q0,R16C21C.CE,TIMER_CE">Data path</A> SLICE_110 to TIMER_INC/SLICE_112:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C21A.CLK to     R16C21A.Q0 <A href="#@comp:SLICE_110">SLICE_110</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         2     0.148<A href="#@net:TIMER_CE:R16C21A.Q0:R16C21C.CE:0.148">     R16C21A.Q0 to R16C21C.CE    </A> <A href="#@net:TIMER_CE">TIMER_CE</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.281   (47.3% logic, 52.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21A.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SLICE_110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21A.CLK:0.880">       49.PADDI to R16C21A.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R16C21C.CLK,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to TIMER_INC/SLICE_112:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R16C21C.CLK:0.880">       49.PADDI to R16C21C.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.306ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SECURE_REGISTER_STACK_PTR/SLICE_14">SECURE_REGISTER_STACK_PTR/Q_362__i4</A>  (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+   Destination:    DP8KC      Port           <A href="#@comp:SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0">SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0</A>(ASIC)  (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A> +)
+
+   Delay:               0.412ns  (32.3% logic, 67.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.412ns physical path delay SECURE_REGISTER_STACK_PTR/SLICE_14 to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0 meets
+      0.052ns ADDR_HLD and
+      0.000ns delay constraint less
+     -0.054ns skew requirement (totaling 0.106ns) by 0.306ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:REG_DEL, 0.133,R14C30C.CLK,R14C30C.Q1,SECURE_REGISTER_STACK_PTR/SLICE_14:ROUTE, 0.279,R14C30C.Q1,EBR_R13C30.ADA7,SECURE_REGISTER_STACK_PTR_OUT_4">Data path</A> SECURE_REGISTER_STACK_PTR/SLICE_14 to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R14C30C.CLK to     R14C30C.Q1 <A href="#@comp:SECURE_REGISTER_STACK_PTR/SLICE_14">SECURE_REGISTER_STACK_PTR/SLICE_14</A> (from <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+ROUTE         3     0.279<A href="#@net:SECURE_REGISTER_STACK_PTR_OUT_4:R14C30C.Q1:EBR_R13C30.ADA7:0.279">     R14C30C.Q1 to EBR_R13C30.ADA7</A> <A href="#@net:SECURE_REGISTER_STACK_PTR_OUT_4">SECURE_REGISTER_STACK_PTR_OUT_4</A> (to <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>)
+                  --------
+                    0.412   (32.3% logic, 67.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.880,49.PADDI,R14C30C.CLK,cpu_fpga_clk_c">Source Clock Path</A> cpu_fpga_clk to SECURE_REGISTER_STACK_PTR/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.880<A href="#@net:cpu_fpga_clk_c:49.PADDI:R14C30C.CLK:0.880">       49.PADDI to R14C30C.CLK   </A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.880   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY 90.000000 MHz ;:ROUTE, 0.934,49.PADDI,EBR_R13C30.CLKA,cpu_fpga_clk_c">Destination Clock Path</A> cpu_fpga_clk to SECURE_REGISTER_STACK/RAM_DQ_16x1024_0_1_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       120     0.934<A href="#@net:cpu_fpga_clk_c:49.PADDI:EBR_R13C30.CLKA:0.934">       49.PADDI to EBR_R13C30.CLKA</A> <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>
+                  --------
+                    0.934   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 90.000000 MHz ;               |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: <A href="#@net:cpu_fpga_clk_c">cpu_fpga_clk_c</A>   Source: cpu_fpga_clk.PAD   Loads: 120
+   Covered under: FREQUENCY 90.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1925 paths, 1 nets, and 1188 connections (94.96% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)

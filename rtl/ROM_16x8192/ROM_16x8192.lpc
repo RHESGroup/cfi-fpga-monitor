@@ -1,0 +1,51 @@
+[Device]
+Family=machxo2
+PartType=LCMXO2-7000HE
+PartName=LCMXO2-7000HE-5TG144C
+SpeedGrade=5
+Package=TQFP144
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=ROM
+CoreRevision=5.4
+ModuleName=ROM_16x8192
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=10/03/2019
+Time=09:24:55
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+Address=8192
+Data=16
+enByte=0
+ByteSize=9
+OutputEn=0
+ClockEn=0
+Optimization=Speed
+Reset=Sync
+Reset1=Sync
+Init=0
+MemFile=e:/dropbox (cini)/group - cybersecurity/control flow integrity/code/hdl/rom_16x8192/secure_edge_table_initializer/secure_edge_table.mem
+MemFormat=bin
+EnECC=0
+Pipeline=0
+Write=Normal
+init_data=0
+
+[FilesGenerated]
+e:/dropbox (cini)/group - cybersecurity/control flow integrity/code/hdl/rom_16x8192/secure_edge_table_initializer/secure_edge_table.mem=mem
+
+[Command]
+cmd_line= -w -n ROM_16x8192 -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type romblk -device LCMXO2-7000HE -addr_width 13 -data_width 16 -num_words 8192 -cascade -1 -memfile "e:/dropbox (cini)/group - cybersecurity/control flow integrity/code/hdl/rom_16x8192/secure_edge_table_initializer/secure_edge_table.mem" -memformat bin

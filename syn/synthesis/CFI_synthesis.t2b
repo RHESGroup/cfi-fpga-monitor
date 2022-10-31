@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "/media/sf_Shared/cfi-fpga-monitor/syn"  

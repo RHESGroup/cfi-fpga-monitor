@@ -1,0 +1,24 @@
+Results of NGD DRC are available in CFI_FPGA_TOP_drc.log.
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[5]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[5]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[4]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[4]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_a[3]' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_a[3]' has no legal load.
+WARNING - synthesis: logical net 'cpu_fpga_bus_noe' has no load.
+WARNING - synthesis: input pad net 'cpu_fpga_bus_noe' has no legal load.
+WARNING - synthesis: DRC complete with 8 warnings.
+
+Design Results:
+    374 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CFI_synthesis.ngd.

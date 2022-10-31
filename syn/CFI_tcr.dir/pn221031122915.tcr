@@ -1,0 +1,10 @@
+#Start recording tcl command: 10/31/2022 12:26:45
+#Project Location: /media/sf_Shared/cfi-fpga-monitor/syn; Project name: CFI
+prj_project open "/media/sf_Shared/cfi-fpga-monitor/syn/CFI.ldf"
+prj_run Synthesis -impl synthesis -forceAll
+prj_run Map -impl synthesis
+prj_run PAR -impl synthesis
+prj_run Export -impl synthesis
+prj_run PAR -impl synthesis -task IOTiming
+prj_run PAR -impl synthesis -task PARTrace
+#Stop recording: 10/31/2022 12:29:15

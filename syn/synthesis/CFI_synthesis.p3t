@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "CFI_synthesis.log"
+-o "CFI_synthesis.csv"
+-pr "CFI_synthesis.prf"
